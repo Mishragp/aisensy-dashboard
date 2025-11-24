@@ -1,0 +1,185 @@
+.webhooks-panel {
+  background-color: white;
+  border-radius: 10px;
+  padding: 28px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e5e5;
+}
+
+.panel-header {
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.panel-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.panel-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.webhook-intro {
+  background-color: #f0f7ff;
+  border-radius: 8px;
+  padding: 20px;
+  border-left: 4px solid #2196F3;
+}
+
+.webhook-question {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 8px 0;
+}
+
+.webhook-explanation {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.examples-section {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.examples-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 12px 0;
+}
+
+.examples-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.examples-list li {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+  padding-left: 0;
+}
+
+.pricing-info {
+  background-color: #fff3cd;
+  border: 1px solid #ffc107;
+  border-radius: 6px;
+  padding: 12px 16px;
+  font-size: 13px;
+  color: #856404;
+  line-height: 1.5;
+}
+
+.pricing-info strong {
+  color: #856404;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.panel-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.btn-primary {
+  padding: 12px 24px;
+  background-color: #25D366;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #20ba5a;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(37, 211, 102, 0.3);
+}
+
+.btn-secondary {
+  padding: 12px 24px;
+  background-color: transparent;
+  color: #25D366;
+  border: 2px solid #25D366;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+  background-color: #e8f5e9;
+}
+
+.btn-link {
+  padding: 12px 24px;
+  background-color: transparent;
+  color: #2196F3;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: all 0.2s;
+}
+
+.btn-link:hover {
+  color: #1976D2;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .webhooks-panel {
+    padding: 20px;
+  }
+
+  .panel-title {
+    font-size: 18px;
+  }
+
+  .panel-actions {
+    flex-direction: column;
+  }
+
+  .btn-primary,
+  .btn-secondary,
+  .btn-link {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .webhooks-panel {
+    padding: 16px;
+  }
+
+  .webhook-intro,
+  .examples-section {
+    padding: 16px;
+  }
+}
+

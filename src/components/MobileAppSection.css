@@ -1,0 +1,204 @@
+.mobile-app-section {
+  background-color: white;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-app-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.qr-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.qr-code {
+  width: 200px;
+  height: 200px;
+  background: #ffffff;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.qr-pattern {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    repeating-linear-gradient(0deg, #000 0px, #000 2px, transparent 2px, transparent 12px),
+    repeating-linear-gradient(90deg, #000 0px, #000 2px, transparent 2px, transparent 12px);
+  opacity: 0.15;
+  z-index: 0;
+}
+
+.qr-icon {
+  font-size: 64px;
+  color: #25D366;
+  z-index: 2;
+  position: relative;
+  background: white;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.store-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.store-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.store-btn:hover {
+  background-color: #f0f0f0;
+  border-color: #25D366;
+}
+
+.store-btn span:first-child {
+  font-size: 10px;
+  color: #666;
+  text-transform: uppercase;
+}
+
+.store-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.key-features {
+  margin-top: 20px;
+}
+
+.features-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.features-list li {
+  padding: 8px 0;
+  font-size: 14px;
+  color: #555;
+  position: relative;
+  padding-left: 20px;
+}
+
+.features-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #25D366;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .mobile-app-section {
+    padding: 20px;
+  }
+
+  .mobile-app-title {
+    font-size: 15px;
+    margin-bottom: 16px;
+  }
+
+  .qr-code {
+    width: 160px;
+    height: 160px;
+  }
+
+  .qr-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 48px;
+  }
+
+  .store-buttons {
+    gap: 8px;
+  }
+
+  .store-btn {
+    padding: 10px;
+  }
+
+  .store-name {
+    font-size: 14px;
+  }
+
+  .features-title {
+    font-size: 15px;
+  }
+
+  .features-list li {
+    font-size: 13px;
+    padding: 6px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .mobile-app-section {
+    padding: 16px;
+  }
+
+  .mobile-app-title {
+    font-size: 14px;
+  }
+
+  .qr-code {
+    width: 140px;
+    height: 140px;
+  }
+
+  .qr-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 40px;
+  }
+
+  .store-btn span:first-child {
+    font-size: 9px;
+  }
+
+  .store-name {
+    font-size: 13px;
+  }
+}

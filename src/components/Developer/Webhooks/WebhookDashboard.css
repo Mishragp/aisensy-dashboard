@@ -1,0 +1,375 @@
+.webhook-dashboard {
+  background-color: white;
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.webhook-info-banner {
+  padding: 12px 20px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.webhook-info-banner.single {
+  background-color: #e8f5e9;
+  border: 1px solid #25D366;
+  color: #2e7d32;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.webhook-info-banner.full {
+  background: linear-gradient(135deg, #25D366 0%, #20ba5a 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.banner-text {
+  font-size: 14px;
+  font-weight: 500;
+  flex: 1;
+  line-height: 1.5;
+}
+
+.banner-purchase-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background-color: white;
+  color: #25D366;
+  border: 2px solid white;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+.banner-purchase-btn::before {
+  content: '💰';
+  font-size: 16px;
+  display: inline-block;
+}
+
+.banner-purchase-btn:hover {
+  background-color: #f8f9fa;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.banner-purchase-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.webhook-dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.webhook-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+}
+
+.btn-add-webhook {
+  padding: 10px 20px;
+  background-color: #25D366;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.btn-add-webhook:hover {
+  background-color: #20ba5a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}
+
+.webhooks-table-container {
+  overflow-x: auto;
+}
+
+.webhooks-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+.webhooks-table thead {
+  background-color: #f9f9f9;
+}
+
+.webhooks-table th {
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 600;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #e5e5e5;
+}
+
+.webhooks-table td {
+  padding: 16px;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 14px;
+  color: #333;
+}
+
+.webhooks-table tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+.webhook-name-cell {
+  font-weight: 600;
+  color: #333;
+}
+
+.webhook-endpoint-cell code {
+  background-color: #f5f5f5;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #666;
+  font-family: 'Courier New', monospace;
+  word-break: break-all;
+}
+
+.webhook-status {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.webhook-status.active {
+  color: #25D366;
+}
+
+.webhook-status.paused {
+  color: #ff9800;
+}
+
+.webhook-actions-cell {
+  display: flex;
+  gap: 8px;
+}
+
+.action-btn {
+  padding: 6px 12px;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.action-btn:hover {
+  background-color: #e5e5e5;
+  border-color: #999;
+}
+
+.action-btn.remove {
+  color: #dc3545;
+}
+
+.action-btn.remove:hover {
+  background-color: #ffe6e6;
+  border-color: #dc3545;
+}
+
+.empty-webhooks {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border: 2px dashed #ddd;
+}
+
+.empty-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.empty-webhooks h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 8px 0;
+}
+
+.empty-webhooks p {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 24px 0;
+}
+
+.btn-create-first {
+  padding: 12px 24px;
+  background-color: #25D366;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-create-first:hover {
+  background-color: #20ba5a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}
+
+.webhook-warning {
+  margin-top: 20px;
+  padding: 12px 16px;
+  background-color: #fff3cd;
+  border: 1px solid #ffc107;
+  border-radius: 6px;
+  font-size: 13px;
+  color: #856404;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .webhook-dashboard {
+    padding: 20px;
+  }
+
+  .webhook-info-banner {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+
+  .banner-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .banner-purchase-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .webhook-dashboard-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .webhook-title {
+    font-size: 20px;
+  }
+
+  .btn-add-webhook {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .webhooks-table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .webhooks-table {
+    min-width: 700px;
+  }
+
+  .webhooks-table th,
+  .webhooks-table td {
+    padding: 12px;
+    font-size: 13px;
+  }
+
+  .webhook-endpoint-cell code {
+    font-size: 11px;
+    word-break: break-all;
+  }
+
+  .webhook-actions-cell {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  .action-btn {
+    padding: 6px 10px;
+    font-size: 12px;
+    margin-left: 0;
+  }
+
+  .empty-webhooks {
+    padding: 40px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .webhook-dashboard {
+    padding: 16px;
+  }
+
+  .webhook-info-banner {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .webhook-title {
+    font-size: 18px;
+  }
+
+  .webhooks-table {
+    min-width: 650px;
+    font-size: 12px;
+  }
+
+  .webhooks-table th,
+  .webhooks-table td {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .action-btn {
+    padding: 5px 8px;
+    font-size: 11px;
+  }
+
+  .empty-webhooks {
+    padding: 30px 16px;
+  }
+
+  .empty-icon {
+    font-size: 36px;
+  }
+}
+

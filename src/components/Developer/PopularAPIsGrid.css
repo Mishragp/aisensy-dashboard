@@ -1,0 +1,151 @@
+.popular-apis-grid {
+  background-color: white;
+  border-radius: 10px;
+  padding: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e5e5;
+}
+
+.apis-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 20px 0;
+}
+
+.apis-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.api-card {
+  border: 2px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 20px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.api-card:hover {
+  border-color: #25D366;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.api-card.pro {
+  border-color: #9c27b0;
+  background: linear-gradient(135deg, #f3e5f5 0%, #ffffff 100%);
+}
+
+.api-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+
+.api-badge.free {
+  background-color: #e8f5e9;
+  color: #25D366;
+}
+
+.api-badge.pro {
+  background-color: #9c27b0;
+  color: white;
+}
+
+.api-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 8px 0;
+}
+
+.api-description {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.5;
+  margin: 0 0 12px 0;
+}
+
+.api-rate {
+  font-size: 12px;
+  color: #999;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.api-action-btn {
+  padding: 8px 16px;
+  background-color: #25D366;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: 100%;
+}
+
+.api-action-btn:hover {
+  background-color: #20ba5a;
+}
+
+.api-action-btn.upgrade {
+  background-color: #9c27b0;
+}
+
+.api-action-btn.upgrade:hover {
+  background-color: #7b1fa2;
+}
+
+.browse-all-link {
+  display: block;
+  text-align: center;
+  color: #25D366;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 12px;
+  border-top: 1px solid #e5e5e5;
+  margin-top: 16px;
+  transition: all 0.2s;
+}
+
+.browse-all-link:hover {
+  color: #20ba5a;
+  text-decoration: underline;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .popular-apis-grid {
+    padding: 20px;
+  }
+
+  .apis-grid {
+    gap: 12px;
+  }
+
+  .api-card {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .popular-apis-grid {
+    padding: 16px;
+  }
+
+  .apis-title {
+    font-size: 16px;
+  }
+}
+

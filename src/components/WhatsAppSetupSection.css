@@ -1,0 +1,377 @@
+.whatsapp-setup-section {
+  background-color: white;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.setup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.setup-title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.setup-icon {
+  font-size: 24px;
+}
+
+.setup-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.steps-left {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+.setup-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.setup-step {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #25D366;
+}
+
+.step-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.step-status {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.step-status.active {
+  background-color: #25D366;
+  color: white;
+}
+
+.step-start {
+  color: #25D366;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.step-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin: 10px 0;
+}
+
+.step-instruction {
+  font-size: 14px;
+  color: #555;
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.step-requirements {
+  font-size: 14px;
+  color: #666;
+  margin: 10px 0;
+}
+
+.step-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #25D366;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.step-link:hover {
+  text-decoration: underline;
+}
+
+.setup-video {
+  width: 100%;
+}
+
+.video-thumbnail {
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 50%, #c44569 100%);
+  border-radius: 8px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid #ddd;
+}
+
+.video-bg-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(135deg, rgba(255, 107, 107, 0.95) 0%, rgba(238, 90, 111, 0.95) 50%, rgba(196, 69, 105, 0.95) 100%),
+    radial-gradient(ellipse at 30% 50%, rgba(255, 255, 255, 0.4) 0%, transparent 70%),
+    radial-gradient(ellipse at 70% 80%, rgba(255, 255, 255, 0.2) 0%, transparent 60%);
+  z-index: 0;
+}
+
+.video-bg-image::after {
+  content: '👩‍💼';
+  position: absolute;
+  font-size: 80px;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.6;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+  z-index: 1;
+}
+
+.video-play-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+
+.play-button {
+  width: 70px;
+  height: 70px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #ee5a6f;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 4;
+}
+
+.video-overlay-top {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 500;
+  z-index: 2;
+}
+
+.video-overlay-text {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  z-index: 2;
+}
+
+.overlay-text-large {
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  line-height: 1;
+}
+
+.overlay-text-small {
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  line-height: 1;
+}
+
+.video-text-bottom {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 10px 14px;
+  border-radius: 4px;
+  z-index: 2;
+  text-align: center;
+}
+
+.setup-actions {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.btn-schedule {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: white;
+  color: #333;
+  border: 1px solid #ddd;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn-schedule:hover {
+  background-color: #f5f5f5;
+}
+
+.btn-facebook {
+  flex: 1;
+  background-color: #1877f2;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-facebook:hover {
+  background-color: #166fe5;
+}
+
+.setup-all-steps {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #666;
+  font-size: 14px;
+  cursor: pointer;
+  justify-content: center;
+  padding: 10px;
+}
+
+.setup-all-steps:hover {
+  color: #25D366;
+}
+
+.arrow-down {
+  font-size: 18px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .whatsapp-setup-section {
+    padding: 20px;
+  }
+
+  .setup-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .setup-title {
+    font-size: 18px;
+  }
+
+  .setup-step {
+    padding: 16px;
+  }
+
+  .step-title {
+    font-size: 16px;
+  }
+
+  .step-instruction,
+  .step-requirements {
+    font-size: 13px;
+  }
+
+  .video-thumbnail {
+    height: 160px;
+  }
+
+  .setup-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .btn-schedule,
+  .btn-facebook {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .whatsapp-setup-section {
+    padding: 16px;
+  }
+
+  .setup-title {
+    font-size: 16px;
+  }
+
+  .steps-left {
+    font-size: 13px;
+  }
+
+  .setup-step {
+    padding: 14px;
+  }
+
+  .step-title {
+    font-size: 15px;
+  }
+
+  .step-instruction,
+  .step-requirements {
+    font-size: 12px;
+  }
+
+  .video-thumbnail {
+    height: 140px;
+  }
+
+  .play-button {
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+  }
+}

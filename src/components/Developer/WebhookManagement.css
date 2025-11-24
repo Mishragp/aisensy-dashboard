@@ -1,0 +1,41 @@
+.webhook-management {
+  width: 100%;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+.webhook-management-content {
+  padding-top: 140px;
+  padding-bottom: 32px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.loading-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-size: 16px;
+  color: #666;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .webhook-management-content {
+    padding: 16px;
+    padding-top: 130px;
+    padding-bottom: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .webhook-management-content {
+    padding: 12px;
+    padding-top: 120px;
+    padding-bottom: 20px;
+  }
+}
+
