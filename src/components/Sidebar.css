@@ -13,10 +13,10 @@
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Desktop: Sidebar visible by default, can be toggled */
+/* Desktop: Sidebar visible when .open class is present */
 @media (min-width: 769px) {
   .sidebar {
-    transform: translateX(0);
+    transform: translateX(-100%);
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     visibility: visible;
   }
