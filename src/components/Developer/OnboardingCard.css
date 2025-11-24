@@ -47,6 +47,9 @@
   min-width: 0; /* Prevent grid item overflow */
   width: 100%;
   box-sizing: border-box;
+  overflow: hidden;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .onboarding-step:hover {
@@ -80,6 +83,9 @@
   font-weight: 600;
   margin: 0;
   color: white;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 .step-description {
@@ -87,6 +93,9 @@
   opacity: 0.9;
   margin: 0;
   line-height: 1.5;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 .step-action-btn {
@@ -119,31 +128,54 @@
 /* Mobile Responsive */
 @media (max-width: 768px) {
   .onboarding-card {
-    padding: 24px;
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
   }
 
   .onboarding-greeting {
     font-size: 22px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 
   .onboarding-subtitle {
     font-size: 14px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 
   .onboarding-steps {
     gap: 16px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .onboarding-step {
     padding: 20px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   .step-title {
     font-size: 16px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 
   .step-description {
     font-size: 13px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .step-action-btn {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 }
 

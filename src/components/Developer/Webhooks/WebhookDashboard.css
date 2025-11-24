@@ -40,6 +40,9 @@
   font-weight: 500;
   flex: 1;
   line-height: 1.5;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  min-width: 0;
 }
 
 .banner-purchase-btn {
@@ -89,6 +92,8 @@
   font-weight: 700;
   color: #333;
   margin: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .btn-add-webhook {
@@ -224,12 +229,16 @@
   font-weight: 600;
   color: #333;
   margin: 0 0 8px 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .empty-webhooks p {
   font-size: 14px;
   color: #666;
   margin: 0 0 24px 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .btn-create-first {
@@ -337,15 +346,39 @@
 @media (max-width: 480px) {
   .webhook-dashboard {
     padding: 16px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   .webhook-info-banner {
     padding: 8px 12px;
     font-size: 12px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .banner-text {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 
   .webhook-title {
     font-size: 18px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .empty-webhooks h3 {
+    font-size: 18px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .empty-webhooks p {
+    font-size: 13px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 
   .webhooks-table {

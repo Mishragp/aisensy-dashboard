@@ -34,8 +34,11 @@
 @media (max-width: 480px) {
   .webhook-management-content {
     padding: 12px;
-    padding-top: 120px;
+    padding-top: 150px; /* Adjusted for mobile header with tabs */
     padding-bottom: 20px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 }
 

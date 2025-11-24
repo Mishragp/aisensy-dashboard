@@ -294,6 +294,11 @@
   padding: 20px;
   cursor: pointer;
   transition: all 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .api-card:hover {
@@ -315,6 +320,9 @@
   color: #333;
   margin: 0;
   flex: 1;
+  min-width: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .api-plan-badge {
@@ -350,6 +358,8 @@
   color: #666;
   margin: 0 0 16px 0;
   line-height: 1.5;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .api-card-footer {
@@ -534,8 +544,30 @@
 @media (max-width: 480px) {
   .api-discovery-content {
     padding: 12px;
-    padding-top: 120px;
+    padding-top: 150px; /* Adjusted for mobile header with tabs */
     padding-bottom: 20px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .api-card {
+    padding: 16px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .api-card-title {
+    font-size: 15px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .api-card-description {
+    font-size: 13px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 
   .page-title {
