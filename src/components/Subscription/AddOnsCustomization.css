@@ -645,12 +645,91 @@
     padding: 16px;
   }
 
+  .breadcrumb {
+    flex-wrap: wrap;
+  }
+
   .addons-main {
     padding: 20px;
   }
 
   .addons-grid {
     grid-template-columns: 1fr;
+  }
+
+  .billing-frequency {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .billing-option {
+    min-width: 100%;
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .subscription-summary {
+    position: relative;
+    top: auto;
+    max-height: none;
+  }
+
+  .summary-section {
+    padding: 0 20px 20px 20px;
+  }
+
+  .plan-content-wrapper {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .plan-right {
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .addons-customization {
+    padding: 12px;
+  }
+
+  .addons-main {
+    padding: 16px;
+  }
+
+  .addon-card {
+    padding: 20px;
+    min-height: auto;
+  }
+
+  .billing-option {
+    padding: 14px 10px;
+  }
+
+  .billing-label-text {
+    font-size: 14px;
+  }
+
+  .save-badge {
+    font-size: 10px;
+  }
+
+  .summary-section {
+    padding: 0 16px 16px 16px;
+  }
+
+  .plan-content-wrapper {
+    flex-direction: column;
+  }
+
+  .plan-right {
+    align-items: flex-start;
+    margin-top: 8px;
+  }
+
+  .btn-checkout {
+    padding: 12px;
+    font-size: 14px;
   }
 }
 

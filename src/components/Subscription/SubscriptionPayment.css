@@ -798,10 +798,26 @@
 
   .billing-frequency {
     flex-direction: column;
+    gap: 10px;
   }
 
   .billing-option {
     min-width: 100%;
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .summary-section {
+    padding: 0 16px 16px 16px;
+  }
+
+  .plan-content-wrapper {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .plan-right {
+    align-items: flex-start;
   }
 
   .plan-card {
@@ -905,6 +921,7 @@
   .breadcrumb {
     font-size: 11px;
     width: 100%;
+    flex-wrap: wrap;
   }
 
   .close-btn {
@@ -955,26 +972,42 @@
 
   .subscription-summary {
     padding: 16px;
+    position: relative;
+    top: auto;
+    max-height: none;
   }
 
   .summary-title {
     font-size: 16px;
   }
 
-  .item-name {
-    font-size: 13px;
+  .billing-option {
+    padding: 14px 10px;
   }
 
-  .item-current-price {
+  .billing-label-text {
     font-size: 14px;
   }
 
-  .annual-total {
-    font-size: 16px;
+  .save-badge {
+    font-size: 10px;
   }
 
-  .btn-next-checkout {
-    padding: 12px 20px;
+  .summary-section {
+    padding: 0 16px 16px 16px;
+  }
+
+  .plan-content-wrapper {
+    flex-direction: column;
+  }
+
+  .plan-right {
+    align-items: flex-start;
+    margin-top: 8px;
+  }
+
+  .btn-checkout {
+    padding: 12px;
     font-size: 14px;
   }
 }

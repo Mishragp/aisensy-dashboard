@@ -188,7 +188,7 @@ function Checkout() {
         <button className="close-btn" onClick={() => navigate(-1)}>×</button>
       </div>
 
-      <div className="checkout-content">
+        <div className="checkout-content">
         <div className="checkout-main">
           <h1 className="checkout-title">Checkout</h1>
 

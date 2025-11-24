@@ -864,6 +864,10 @@
     padding: 16px;
   }
 
+  .breadcrumb {
+    flex-wrap: wrap;
+  }
+
   .checkout-main,
   .checkout-summary {
     padding: 20px;
@@ -873,12 +877,95 @@
     font-size: 24px;
   }
 
+  .billing-frequency-summary {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .billing-option-summary {
+    min-width: 100%;
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .checkout-summary {
+    position: relative;
+    top: auto;
+    max-height: none;
+  }
+
+  .plan-content-wrapper-checkout {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .plan-right-checkout {
+    align-items: flex-start;
+  }
+
   .modal-content {
     max-width: 100%;
   }
 
   .modal-row {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .checkout-page {
+    padding: 12px;
+  }
+
+  .checkout-main,
+  .checkout-summary {
+    padding: 16px;
+  }
+
+  .checkout-title {
+    font-size: 20px;
+  }
+
+  .billing-option-summary {
+    padding: 14px 10px;
+  }
+
+  .billing-content-summary > span:first-child {
+    font-size: 14px;
+  }
+
+  .save-badge-summary {
+    font-size: 10px;
+  }
+
+  .plan-content-wrapper-checkout {
+    flex-direction: column;
+  }
+
+  .plan-right-checkout {
+    align-items: flex-start;
+    margin-top: 8px;
+  }
+
+  .btn-pay-now {
+    width: 100%;
+    margin: 0 0 20px 0;
+  }
+
+  .subscription-changes {
+    padding: 0 16px 16px 16px;
+  }
+
+  .total-due {
+    padding: 16px;
+  }
+
+  .next-charge {
+    padding: 0 16px 16px 16px;
+  }
+
+  .info-section {
+    padding: 0 16px;
   }
 }
 
