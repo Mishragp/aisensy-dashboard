@@ -2,13 +2,18 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import './DeveloperHeader.css'
 
-function DeveloperHeader({ activeTab = 'dashboard' }) {
+function DeveloperHeader({ activeTab = 'dashboard', onMenuClick }) {
   const navigate = useNavigate()
 
   return (
     <div className="developer-header">
       <div className="dev-header-top">
         <div className="dev-header-left">
+          <button className="dev-mobile-menu-btn" onClick={onMenuClick}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
           <div className="dev-logo">
             <span className="aisensy-logo">AiSensy</span>
             <span className="dev-badge">Developer</span>

@@ -8,10 +8,10 @@ import PopularAPIsGrid from './PopularAPIsGrid'
 import HelpResources from './HelpResources'
 import './DeveloperDashboard.css'
 
-function DeveloperDashboard() {
+function DeveloperDashboard({ onMenuClick }) {
   return (
     <div className="developer-dashboard">
-      <DeveloperHeader />
+      <DeveloperHeader onMenuClick={onMenuClick} />
       <div className="developer-content">
         <div className="developer-main">
           <OnboardingCard />

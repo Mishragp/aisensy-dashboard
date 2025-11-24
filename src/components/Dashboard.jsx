@@ -65,16 +65,18 @@ function Dashboard({ developerView }) {
       />
       <div className={`dashboard-main ${sidebarHidden ? 'sidebar-hidden' : ''}`}>
         {!developerView && <Header onMenuClick={handleSidebarToggle} />}
-        {developerView === "dashboard" ? (
-          <DeveloperDashboard />
+        {developerView === null || developerView === undefined ? (
+          <MainContent />
+        ) : developerView === "dashboard" ? (
+          <DeveloperDashboard onMenuClick={handleSidebarToggle} />
         ) : developerView === "api-keys" ? (
-          <APIKeyManagement />
+          <APIKeyManagement onMenuClick={handleSidebarToggle} />
         ) : developerView === "api-docs" ? (
-          <APIDiscovery />
+          <APIDiscovery onMenuClick={handleSidebarToggle} />
         ) : developerView === "api-detail" ? (
-          <APIDetailView />
+          <APIDetailView onMenuClick={handleSidebarToggle} />
         ) : developerView === "webhooks" ? (
-          <WebhookManagement />
+          <WebhookManagement onMenuClick={handleSidebarToggle} />
         ) : (
           <MainContent />
         )}

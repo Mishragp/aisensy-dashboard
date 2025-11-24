@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import DeveloperHeader from './DeveloperHeader'
 import './APIDiscovery.css'
 
-function APIDiscovery() {
+function APIDiscovery({ onMenuClick }) {
   const navigate = useNavigate()
   const [searchQuery, setSearchQuery] = useState('')
   const [categoryFilter, setCategoryFilter] = useState('all')
@@ -204,7 +204,7 @@ function APIDiscovery() {
 
   return (
     <div className="api-discovery">
-      <DeveloperHeader activeTab="api-docs" />
+      <DeveloperHeader activeTab="api-docs" onMenuClick={onMenuClick} />
       <div className="api-discovery-content">
         <div className="api-discovery-header">
           <h1 className="page-title">API Documentation</h1>

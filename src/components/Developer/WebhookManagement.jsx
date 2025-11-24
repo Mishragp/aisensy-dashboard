@@ -5,7 +5,7 @@ import CreateWebhookModal from './Webhooks/CreateWebhookModal'
 import PurchaseWebhookModal from './Webhooks/PurchaseWebhookModal'
 import './WebhookManagement.css'
 
-function WebhookManagement() {
+function WebhookManagement({ onMenuClick }) {
   const [webhooks, setWebhooks] = useState([])
   const [showCreateModal, setShowCreateModal] = useState(false)
   const [showPurchaseModal, setShowPurchaseModal] = useState(false)
@@ -85,7 +85,7 @@ function WebhookManagement() {
 
   return (
     <div className="webhook-management">
-      <DeveloperHeader activeTab="webhooks" />
+      <DeveloperHeader activeTab="webhooks" onMenuClick={onMenuClick} />
       <div className="webhook-management-content">
         <WebhookDashboard
           webhooks={activeWebhooks}
