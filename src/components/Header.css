@@ -16,7 +16,12 @@
   transition: left 0.3s ease, width 0.3s ease;
 }
 
-.dashboard-main.sidebar-hidden .header {
+.dashboard-main.sidebar-open .header {
+  left: 240px;
+  width: calc(100% - 240px);
+}
+
+.dashboard-main.sidebar-closed .header {
   left: 0;
   width: 100%;
 }

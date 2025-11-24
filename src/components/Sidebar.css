@@ -13,15 +13,22 @@
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Desktop: Sidebar hidden state - completely hide it */
+/* Desktop: Sidebar visible by default, can be toggled */
 @media (min-width: 769px) {
-  .sidebar.hidden {
-    transform: translateX(-100%);
-    visibility: hidden;
-  }
-  
-  .sidebar:not(.hidden) {
+  .sidebar {
     transform: translateX(0);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    visibility: visible;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+    visibility: visible;
+  }
+
+  /* When sidebar is closed (not open) */
+  .sidebar:not(.open) {
+    transform: translateX(-100%);
     visibility: visible;
   }
 }
@@ -139,18 +146,26 @@
 /* Mobile Responsive */
 @media (max-width: 768px) {
   .sidebar {
-    transform: translateX(-100%);
+    transform: translateX(-100%) !important;
     transition: transform 0.3s ease;
     z-index: 1001;
+    visibility: visible;
   }
 
   .sidebar.open {
-    transform: translateX(0);
+    transform: translateX(0) !important;
     z-index: 1001;
+    visibility: visible;
   }
 
   .sidebar.hidden {
-    transform: translateX(-100%);
+    transform: translateX(-100%) !important;
+    visibility: visible;
+  }
+
+  /* Override desktop hidden state on mobile */
+  .sidebar.hidden.open {
+    transform: translateX(0) !important;
   }
 
   .sidebar-header {
