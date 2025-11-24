@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import Dashboard from './components/Dashboard'
 import SubscriptionPayment from './components/Subscription/SubscriptionPayment'
 import AddOnsCustomization from './components/Subscription/AddOnsCustomization'
@@ -19,6 +19,8 @@ function App() {
         <Route path="/subscription" element={<SubscriptionPayment />} />
         <Route path="/subscription/add-ons" element={<AddOnsCustomization />} />
         <Route path="/subscription/checkout" element={<Checkout />} />
+        {/* Ensure any unmatched route goes to dashboard */}
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </Router>
   )
