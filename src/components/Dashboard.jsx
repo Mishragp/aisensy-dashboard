@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import { useLocation } from 'react-router-dom'
 import Sidebar from './Sidebar'
 import Header from './Header'
 import MainContent from './MainContent'
@@ -11,11 +10,6 @@ import WebhookManagement from './Developer/WebhookManagement'
 import './Dashboard.css'
 
 function Dashboard({ developerView }) {
-  const location = useLocation()
-  
-  // Ensure that root path (/) always shows MainContent, not developer view
-  const isRootPath = location.pathname === '/'
-  const shouldShowMainContent = isRootPath || developerView === null || developerView === undefined
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const [sidebarHidden, setSidebarHidden] = useState(false) // Desktop: start with sidebar visible
 
@@ -70,19 +64,17 @@ function Dashboard({ developerView }) {
         developerView={developerView}
       />
       <div className={`dashboard-main ${sidebarHidden ? 'sidebar-hidden' : ''}`}>
-        {shouldShowMainContent && <Header onMenuClick={handleSidebarToggle} />}
-        {shouldShowMainContent ? (
-          <MainContent />
-        ) : developerView === "dashboard" ? (
-          <DeveloperDashboard onMenuClick={handleSidebarToggle} />
+        {!developerView && <Header onMenuClick={handleSidebarToggle} />}
+        {developerView === "dashboard" ? (
+          <DeveloperDashboard />
         ) : developerView === "api-keys" ? (
-          <APIKeyManagement onMenuClick={handleSidebarToggle} />
+          <APIKeyManagement />
         ) : developerView === "api-docs" ? (
-          <APIDiscovery onMenuClick={handleSidebarToggle} />
+          <APIDiscovery />
         ) : developerView === "api-detail" ? (
-          <APIDetailView onMenuClick={handleSidebarToggle} />
+          <APIDetailView />
         ) : developerView === "webhooks" ? (
-          <WebhookManagement onMenuClick={handleSidebarToggle} />
+          <WebhookManagement />
         ) : (
           <MainContent />
         )}

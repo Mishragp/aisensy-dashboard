@@ -461,7 +461,7 @@
 @media (max-width: 768px) {
   .api-discovery-content {
     padding: 16px;
-    padding-top: 200px; /* Increased for mobile header (header-top + nav-tabs) */
+    padding-top: 130px;
     padding-bottom: 24px;
   }
 
@@ -469,12 +469,10 @@
     flex-direction: column;
     align-items: stretch;
     gap: 16px;
-    margin-top: 0; /* Ensure header is visible */
   }
 
   .page-title {
     font-size: 20px;
-    margin-top: 0; /* Ensure title is visible */
   }
 
   .search-filters-row {
@@ -536,13 +534,12 @@
 @media (max-width: 480px) {
   .api-discovery-content {
     padding: 12px;
-    padding-top: 180px; /* Adjusted for smaller mobile header */
+    padding-top: 120px;
     padding-bottom: 20px;
   }
 
   .page-title {
     font-size: 18px;
-    margin-top: 0; /* Ensure title is visible */
   }
 
   .api-card {

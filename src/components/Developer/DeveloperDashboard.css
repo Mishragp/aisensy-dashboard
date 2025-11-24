@@ -47,7 +47,7 @@
   .developer-content {
     grid-template-columns: 1fr;
     padding: 16px;
-    padding-top: 200px; /* Increased for mobile header (header-top + nav-tabs) */
+    padding-top: 130px; /* Increased for mobile header */
     gap: 16px;
   }
 
@@ -60,7 +60,7 @@
 @media (max-width: 480px) {
   .developer-content {
     padding: 12px;
-    padding-top: 180px; /* Adjusted for smaller mobile header */
+    padding-top: 85px;
   }
 }
 

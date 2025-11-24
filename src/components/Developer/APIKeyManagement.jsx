@@ -6,7 +6,7 @@ import ListView from './APIKeys/ListView'
 import GenerateKeyModal from './APIKeys/GenerateKeyModal'
 import './APIKeyManagement.css'
 
-function APIKeyManagement({ onMenuClick }) {
+function APIKeyManagement() {
   const navigate = useNavigate()
   const [apiKeys, setApiKeys] = useState([])
   const [showGenerateModal, setShowGenerateModal] = useState(false)
@@ -79,7 +79,7 @@ function APIKeyManagement({ onMenuClick }) {
 
   return (
     <div className="api-key-management">
-      <DeveloperHeader activeTab="api-keys" onMenuClick={onMenuClick} />
+      <DeveloperHeader activeTab="api-keys" />
       <div className="api-key-content">
         {apiKeys.length === 0 || apiKeys.filter(k => k.status === 'active').length === 0 ? (
           <EmptyStateView onGenerateClick={() => setShowGenerateModal(true)} />

@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 import DeveloperHeader from './DeveloperHeader'
 import './APIDetailView.css'
 
-function APIDetailView({ onMenuClick }) {
+function APIDetailView() {
   const { apiId } = useParams()
   const navigate = useNavigate()
   const [activeTab, setActiveTab] = useState('overview')
@@ -168,7 +168,7 @@ HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.o
 
   return (
     <div className="api-detail-view">
-      <DeveloperHeader activeTab="api-docs" onMenuClick={onMenuClick} />
+      <DeveloperHeader activeTab="api-docs" />
       <div className="api-detail-content">
         <div className="api-detail-header">
           <button className="back-btn" onClick={() => navigate('/developer/api-docs')}>

@@ -11,6 +11,8 @@ function ListView({ apiKeys, onGenerateClick, onUpdateKey, onDeleteKey, onRotate
   const [menuPosition, setMenuPosition] = useState('bottom') // 'top' or 'bottom'
   const [menuButtonRect, setMenuButtonRect] = useState(null)
   const [copyToast, setCopyToast] = useState(null)
+  const [showFilters, setShowFilters] = useState(false)
+  const filterRef = useRef(null)
 
   // Close menu when clicking outside
   useEffect(() => {
@@ -47,6 +49,20 @@ function ListView({ apiKeys, onGenerateClick, onUpdateKey, onDeleteKey, onRotate
       return () => clearTimeout(timer)
     }
   }, [copyToast])
+
+  // Close filter dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (filterRef.current && !filterRef.current.contains(event.target)) {
+        setShowFilters(false)
+      }
+    }
+
+    if (showFilters) {
+      document.addEventListener('mousedown', handleClickOutside)
+      return () => document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [showFilters])
 
   // Filter and sort keys
   const filteredAndSortedKeys = useMemo(() => {
@@ -125,7 +141,7 @@ function ListView({ apiKeys, onGenerateClick, onUpdateKey, onDeleteKey, onRotate
     <div className="list-view">
       <div className="list-view-header">
         <div className="list-view-top-bar">
-          <h2 className="list-view-title">API Keys ({apiKeys.length} total)</h2>
+          <h2 className="list-view-title">API Keys</h2>
           <div className="header-actions-row">
             <div className="search-bar">
               <input
@@ -139,58 +155,71 @@ function ListView({ apiKeys, onGenerateClick, onUpdateKey, onDeleteKey, onRotate
                 className="search-input"
               />
             </div>
+            <div className="filter-button-wrapper" ref={filterRef}>
+              <button 
+                className="btn-filters" 
+                onClick={() => setShowFilters(!showFilters)}
+              >
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 4h12M4 8h8M6 12h4" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                </svg>
+                Filters
+              </button>
+              {showFilters && (
+                <div className="filters-dropdown">
+                  <button
+                    className={`filter-option ${filterStatus === 'all' ? 'active' : ''}`}
+                    onClick={() => {
+                      setFilterStatus('all')
+                      setCurrentPage(1)
+                      setShowFilters(false)
+                    }}
+                  >
+                    All ({apiKeys.length})
+                  </button>
+                  <button
+                    className={`filter-option ${filterStatus === 'active' ? 'active' : ''}`}
+                    onClick={() => {
+                      setFilterStatus('active')
+                      setCurrentPage(1)
+                      setShowFilters(false)
+                    }}
+                  >
+                    Active ({activeKeysCount})
+                  </button>
+                  <button
+                    className={`filter-option ${filterStatus === 'inactive' ? 'active' : ''}`}
+                    onClick={() => {
+                      setFilterStatus('inactive')
+                      setCurrentPage(1)
+                      setShowFilters(false)
+                    }}
+                  >
+                    Inactive ({inactiveKeysCount})
+                  </button>
+                </div>
+              )}
+            </div>
+            <div className="sort-control">
+              <svg className="sort-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 6L8 2L12 6M4 10L8 14L12 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+              <select
+                value={sortBy}
+                onChange={(e) => setSortBy(e.target.value)}
+                className="sort-select"
+              >
+                <option value="most-recent">Most Recent</option>
+                <option value="oldest">Oldest First</option>
+                <option value="name">Name (A-Z)</option>
+              </select>
+            </div>
             <button className="btn-generate-new" onClick={onGenerateClick}>
               + Generate New Key
             </button>
           </div>
         </div>
-
-        <div className="filters-sort-row">
-          <div className="filters">
-            <button
-              className={`filter-btn ${filterStatus === 'all' ? 'active' : ''}`}
-              onClick={() => {
-                setFilterStatus('all')
-                setCurrentPage(1)
-              }}
-            >
-              All ({apiKeys.length})
-            </button>
-            <button
-              className={`filter-btn ${filterStatus === 'active' ? 'active' : ''}`}
-              onClick={() => {
-                setFilterStatus('active')
-                setCurrentPage(1)
-              }}
-            >
-              Active ({activeKeysCount})
-            </button>
-            <button
-              className={`filter-btn ${filterStatus === 'inactive' ? 'active' : ''}`}
-              onClick={() => {
-                setFilterStatus('inactive')
-                setCurrentPage(1)
-              }}
-            >
-              Inactive ({inactiveKeysCount})
-            </button>
-          </div>
-
-          <div className="sort-control">
-            <svg className="sort-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M4 6L8 2L12 6M4 10L8 14L12 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-            <select
-              value={sortBy}
-              onChange={(e) => setSortBy(e.target.value)}
-              className="sort-select"
-            >
-              <option value="most-recent">Most Recent</option>
-              <option value="oldest">Oldest First</option>
-              <option value="name">Name (A-Z)</option>
-            </select>
-          </div>
-        </div>
+        <div className="showing-count">Showing {totalKeys} {totalKeys === 1 ? 'API key' : 'API keys'}</div>
       </div>
 
       <div className="table-container">

@@ -26,26 +26,6 @@
 .dev-header-left {
   display: flex;
   align-items: center;
-  gap: 12px;
-}
-
-.dev-mobile-menu-btn {
-  display: none;
-  flex-direction: column;
-  gap: 4px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 8px;
-  margin-right: 8px;
-}
-
-.dev-mobile-menu-btn span {
-  width: 24px;
-  height: 3px;
-  background-color: #333;
-  border-radius: 2px;
-  transition: all 0.3s;
 }
 
 .dev-logo {
@@ -152,10 +132,6 @@
 @media (max-width: 768px) {
   .developer-header {
     left: 0; /* Full width on mobile */
-  }
-
-  .dev-mobile-menu-btn {
-    display: flex;
   }
 
   .dev-header-top {

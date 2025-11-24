@@ -2,6 +2,8 @@ import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Dashboard from './components/Dashboard'
 import SubscriptionPayment from './components/Subscription/SubscriptionPayment'
+import AddOnsCustomization from './components/Subscription/AddOnsCustomization'
+import Checkout from './components/Subscription/Checkout'
 import './App.css'
 
 function App() {
@@ -15,9 +17,12 @@ function App() {
         <Route path="/developer/api-docs/:apiId" element={<Dashboard developerView="api-detail" />} />
         <Route path="/developer/webhooks" element={<Dashboard developerView="webhooks" />} />
         <Route path="/subscription" element={<SubscriptionPayment />} />
+        <Route path="/subscription/add-ons" element={<AddOnsCustomization />} />
+        <Route path="/subscription/checkout" element={<Checkout />} />
       </Routes>
     </Router>
   )
 }
 
 export default App
+

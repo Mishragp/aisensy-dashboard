@@ -529,7 +529,7 @@
 @media (max-width: 768px) {
   .api-detail-content {
     padding: 16px;
-    padding-top: 200px; /* Increased for mobile header (header-top + nav-tabs) */
+    padding-top: 130px;
     padding-bottom: 24px;
   }
 
@@ -609,7 +609,7 @@
 @media (max-width: 480px) {
   .api-detail-content {
     padding: 12px;
-    padding-top: 180px; /* Adjusted for smaller mobile header */
+    padding-top: 120px;
     padding-bottom: 20px;
   }
 
