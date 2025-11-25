@@ -99,6 +99,25 @@
   box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
 }
 
+.btn-generate-first-secondary {
+  padding: 12px 24px;
+  background-color: transparent;
+  color: #25D366;
+  border: 2px solid #25D366;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-generate-first-secondary:hover {
+  background-color: #25D366;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+}
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
   .empty-state-view {
@@ -121,7 +140,8 @@
     font-size: 13px;
   }
 
-  .btn-generate-first {
+  .btn-generate-first,
+  .btn-generate-first-secondary {
     width: 100%;
   }
 }

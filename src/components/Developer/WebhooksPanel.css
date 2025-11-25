@@ -129,7 +129,8 @@
 }
 
 .btn-secondary:hover {
-  background-color: #e8f5e9;
+  background-color: #25D366;
+  color: white;
 }
 
 .btn-link {

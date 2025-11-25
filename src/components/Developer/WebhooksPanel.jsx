@@ -34,7 +34,7 @@ function WebhooksPanel() {
         </div>
         
         <div className="panel-actions">
-          <button className="btn-primary" onClick={() => navigate('/developer/webhooks')}>
+          <button className="btn-secondary" onClick={() => navigate('/developer/webhooks')}>
             + Create Your First Webhook
           </button>
           <button className="btn-link">Learn More About Webhooks</button>

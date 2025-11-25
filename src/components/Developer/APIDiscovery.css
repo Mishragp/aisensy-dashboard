@@ -395,6 +395,17 @@
   background-color: #20ba5a;
 }
 
+.api-card-action.view-secondary {
+  background-color: transparent;
+  color: #25D366;
+  border: 2px solid #25D366;
+}
+
+.api-card-action.view-secondary:hover {
+  background-color: #25D366;
+  color: white;
+}
+
 .api-card-action.upgrade {
   background-color: #9c27b0;
   color: white;

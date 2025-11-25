@@ -240,7 +240,7 @@ function SubscriptionPayment() {
         <div className="subscription-summary">
           <button className="summary-close-btn" onClick={() => navigate(-1)}>×</button>
           <div className="summary-header-content">
-            <h3 className="summary-title">Your new subscription</h3>
+            <h3 className="summary-title">Your New Subscription</h3>
 
             <div className="billing-frequency">
               <label className={`billing-option ${billingFrequency === 'monthly' ? 'selected' : ''}`}>

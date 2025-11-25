@@ -106,6 +106,17 @@
   background-color: #7b1fa2;
 }
 
+.api-action-btn.secondary {
+  background-color: transparent;
+  color: #25D366;
+  border: 2px solid #25D366;
+}
+
+.api-action-btn.secondary:hover {
+  background-color: #25D366;
+  color: white;
+}
+
 .browse-all-link {
   display: block;
   text-align: center;

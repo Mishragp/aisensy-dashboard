@@ -425,7 +425,7 @@ function APIDiscovery() {
               <div className="api-card-footer">
                 <span className="api-rate-limit">Rate: {api.rateLimit}</span>
                 <button 
-                  className={`api-card-action ${api.plan === 'pro' ? 'upgrade' : 'view'}`}
+                  className={`api-card-action ${api.plan === 'pro' ? 'upgrade' : 'view-secondary'}`}
                   onClick={(e) => {
                     e.stopPropagation()
                     if (api.plan === 'pro') {

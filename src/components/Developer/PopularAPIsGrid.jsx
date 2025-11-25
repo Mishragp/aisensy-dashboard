@@ -15,7 +15,7 @@ function PopularAPIsGrid() {
           <h4 className="api-name">Send Message API</h4>
           <p className="api-description">Send WhatsApp messages via API.</p>
           <div className="api-rate">100/min</div>
-          <button className="api-action-btn" onClick={() => navigate('/developer/api-docs/send-message')}>
+          <button className="api-action-btn secondary" onClick={() => navigate('/developer/api-docs/send-message')}>
             View Docs
           </button>
         </div>
@@ -25,7 +25,7 @@ function PopularAPIsGrid() {
           <h4 className="api-name">Receive Msg API</h4>
           <p className="api-description">Receive incoming WhatsApp msgs.</p>
           <div className="api-rate">100/min</div>
-          <button className="api-action-btn" onClick={() => navigate('/developer/api-docs/receive-message')}>
+          <button className="api-action-btn secondary" onClick={() => navigate('/developer/api-docs/receive-message')}>
             View Docs
           </button>
         </div>

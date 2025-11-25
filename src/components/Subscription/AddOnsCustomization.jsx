@@ -300,10 +300,10 @@ function AddOnsCustomization() {
 
         <div className="subscription-summary">
           <div className="summary-header-content">
-            <h3 className="summary-title">Your new subscription</h3>
+            <h3 className="summary-title">Your New Subscription</h3>
           </div>
 
-          <div className="billing-frequency">
+          <div className="billing-frequency-1">
             <label className={`billing-option ${billingFrequency === 'monthly' ? 'selected' : ''}`}>
               <input 
                 type="radio" 

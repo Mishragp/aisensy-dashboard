@@ -259,6 +259,25 @@
   box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
 }
 
+.btn-create-first-secondary {
+  padding: 12px 24px;
+  background-color: transparent;
+  color: #25D366;
+  border: 2px solid #25D366;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-create-first-secondary:hover {
+  background-color: #25D366;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}
+
 .webhook-warning {
   margin-top: 20px;
   padding: 12px 16px;

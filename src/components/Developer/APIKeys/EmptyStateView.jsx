@@ -25,7 +25,7 @@ function EmptyStateView({ onGenerateClick }) {
           <strong>Security tip:</strong> Keep your API keys secret. Never expose them in client-side code or public repos.
         </div>
         
-        <button className="btn-generate-first" onClick={onGenerateClick}>
+        <button className="btn-generate-first-secondary" onClick={onGenerateClick}>
           + Generate Your First Key
         </button>
       </div>

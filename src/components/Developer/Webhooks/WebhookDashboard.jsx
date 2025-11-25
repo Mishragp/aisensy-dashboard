@@ -116,7 +116,7 @@ function WebhookDashboard({
             <div className="empty-icon">🔗</div>
             <h3>No webhooks yet</h3>
             <p>Create your first webhook to receive real-time event notifications</p>
-            <button className="btn-create-first" onClick={onCreateClick}>
+            <button className="btn-create-first-secondary" onClick={onCreateClick}>
               Create Your First Webhook
             </button>
           </div>

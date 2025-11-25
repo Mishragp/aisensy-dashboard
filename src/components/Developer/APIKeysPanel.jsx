@@ -30,7 +30,7 @@ function APIKeysPanel() {
         </div>
         
         <div className="panel-actions">
-          <button className="btn-primary" onClick={() => navigate('/developer/api-keys')}>
+          <button className="btn-secondary" onClick={() => navigate('/developer/api-keys')}>
             + Generate Your First API Key
           </button>
           <button className="btn-secondary" onClick={() => navigate('/developer/api-keys')}>
